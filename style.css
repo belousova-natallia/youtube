@@ -2,6 +2,7 @@ body, html, ul {
 	background: #eee;
 	margin:0;
 	padding: 0;
+	touch-action: none
 }
 
 .searchForm{
@@ -73,6 +74,7 @@ height: 465px;
 
 #searchUl img{
 width:280px;
+border-radius: 10px;
 }
 
 li.video {
@@ -99,15 +101,21 @@ li .description {
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;  
 }
-li h2 {
+li h2 a{
 	overflow: hidden;
     display: -webkit-box;
     -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;  
+    -webkit-box-orient: vertical; 
+    text-decoration: none; 
+    color: #056f89;
+    text-align: center;
+}
+li h2 a:hover{
+	text-decoration: underline;
 }
 
 #search-container {
-	width: 1290px;
+	width: 1296px;
 	margin:0 auto;
     overflow: hidden;
   
@@ -140,4 +148,65 @@ display:none!important;
 	padding-top: 12px;
 	text-align: center;
 	margin: 5px;
+	border-radius: 5px;
+}
+
+.author::before {
+	content: '\f007';
+	font-family: 'FontAwesome';
+	margin-right: 10px;
+	color: #056f89;
+}
+
+.publishedAt::before {
+	content: '\f073';
+	font-family: 'FontAwesome';
+	margin-right: 7px;
+	color: #056f89;
+}
+
+.statistics::before {
+	content: '\f06e';
+	font-family: 'FontAwesome';
+	margin-right: 7px;
+	color: #056f89;
+}
+
+
+
+@media (max-width: 1302px) {
+  #search-container {
+	width: 972px;
+}
+}
+
+@media (max-width: 980px) {
+  #search-container {
+	width: 648px;
+}
+}
+
+@media (max-width: 660px) {
+  #search-container {
+	width: 324px;
+}
+.searchForm{
+	width: 90%;
+	margin: 10px auto;
+
+}
+input {
+    width: 97%;
+    }
+
+#search-button {
+	width: 100%;
+	margin-left: 0px;
+	height: 40px;
+	margin-top: 10px;
+}
+.pagination {
+	margin-top: 20px;
+    margin-bottom: 30px;
+}
 }
