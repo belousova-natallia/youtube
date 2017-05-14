@@ -150,6 +150,12 @@ display:none!important;
 	margin: 5px;
 	border-radius: 5px;
 }
+.author {
+	overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical; 
+}
 
 .author::before {
 	content: '\f007';
